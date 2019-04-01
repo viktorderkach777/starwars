@@ -82,14 +82,7 @@ class App extends Component {
        {
          PLACES.map( (place, index)=> (
            <button key={index}
-            className={"button " + (index%2===0?"is-danger":"is-primary")
-
-
-              //()=>{
-        //      if(index %2 ===0) {console.log(index); return "button is-danger";}
-        //      console.log(index);
-        //      return "button is-primary";
-         //}
+            className={"button " + (index%2===0?"is-danger":"is-primary")              
         }
            onClick={() => {
             //  console.log(`Button ${index} clicked!!!`)
