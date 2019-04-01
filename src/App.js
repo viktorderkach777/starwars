@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import 'bulma/css/bulma.css';
 
 
 class WeatherService extends Component {
@@ -81,6 +82,15 @@ class App extends Component {
        {
          PLACES.map( (place, index)=> (
            <button key={index}
+            className={"button " + (index%2===0?"is-danger":"is-primary")
+
+
+              //()=>{
+        //      if(index %2 ===0) {console.log(index); return "button is-danger";}
+        //      console.log(index);
+        //      return "button is-primary";
+         //}
+        }
            onClick={() => {
             //  console.log(`Button ${index} clicked!!!`)
             this.setState({activePlace: index})
