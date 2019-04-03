@@ -39,79 +39,30 @@ class WeatherService extends Component {
     return (
       <div>
         {
-          planets.map((planet, index)=>  <p>Name:{planet.name}</p>)
+          planets.map((planet, index)=> 
+          <div>
+            <br></br>
+           <p>Name:{planet.name}</p>
+           <p>Diameter:{planet.diameter}</p>
+           <p>Rotation_period:{planet.rotation_period}</p> 
+           <p>Orbital_period:{planet.orbital_period}</p>
+           <p>Gravity:{planet.gravity}</p>
+           <p>Population:{planet.population}</p> 
+           <p>Climate:{planet.climate}</p>
+           <p>Terrain:{planet.terrain}</p>
+           <p>Surface_water:{planet.surface_water}</p> 
+           <br></br>
+           <hr></hr>  
+           {/* <p>{JSON.stringify(weatherData)}></p>   */}
+           </div>
+          
+                     )
         }
       </div>
-
-      // weatherData.map(
-      //   (index)=>(
-      //     <p>Name:{weatherData.results[index].name}</p>
-      //   )
-      // )
-
-      // <
-      // div >
-
-      // {
-      //   JSON.stringify(weatherData)
-      // } {
-      //   console.log(JSON.stringify(weatherData.results[0].name))
-      // } <
-      // p > Name: {
-      //   weatherData.results[0].name
-      // } < /p>
-
-      // <
-      // p > Diameter: {
-      //   weatherData.results[0].diameter
-      // } < /p>
-
-      // <
-      // p > Rotation_period: {
-      //   weatherData.results[0].rotation_period
-      // } < /p>
-
-      // <
-      // p > Orbital_period: {
-      //   weatherData.results[0].orbital_period
-      // } < /p>
-
-      // <
-      // p > Gravity: {
-      //   weatherData.results[0].gravity
-      // } < /p>
-
-      // <
-      // p > Population: {
-      //   weatherData.results[0].population
-      // } < /p>
-
-      // <
-      // p > Climate: {
-      //   weatherData.results[0].climate
-      // } < /p>
-
-      // <
-      // p > Terrain: {
-      //   weatherData.results[0].terrain
-      // } < /p>
-
-      // <
-      // p > Surface_water: {
-      //   weatherData.results[0].surface_water
-      // } < /p> <
-      // /div>
-
     );
   }
 }
 
-// const PLACES = [
-// {name:"Washington", zip: "10001"},
-// {name:"New York", zip: "20001"},
-// {name:"Seatle", zip: "30001"},
-// {name:"Las Vegas", zip: "40001"},
-// ];
 
 const PLACES = [{
     zip: "1"
@@ -125,6 +76,15 @@ const PLACES = [{
   {
     zip: "4"
   },
+  {
+    zip: "5"
+  },
+  {
+    zip: "6"
+  },
+  {
+    zip: "7"
+  },  
 ];
 
 
@@ -159,17 +119,16 @@ class App extends Component {
             }
           } > {
             place.zip
-          } <
-          /button>
+          } 
+          </button>
         ))
-      } <
-      WeatherService zip = {
+      } 
+      <WeatherService zip = {
         PLACES[activePlace].zip
       }
       key = {
         activePlace
-      } > < /WeatherService> <
-      /div>
+      } > </WeatherService> </div>
     );
   }
 }
